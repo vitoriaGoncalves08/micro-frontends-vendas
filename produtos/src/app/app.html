@@ -1,0 +1,18 @@
+<div class="container">
+  <header class="page-header">
+    <span class="eyebrow">Coleção</span>
+    <h1>Lista de Produtos</h1>
+  </header>
+  <div class="produtos">
+    @for (produto of produtos; track produto.nome) {
+    <div class="card">
+      <div class="card-media">
+        <img [src]="produto.imagem" [alt]="produto.nome">
+      </div>
+      <h2>{{produto.nome}}</h2>
+      <p class="valor">{{ produto.valor | currency:'BRL' }}</p>
+      <button>Adicionar ao carrinho</button>
+    </div>
+    }
+  </div>
+</div>
